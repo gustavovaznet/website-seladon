@@ -1,0 +1,25 @@
+{
+  "name": "seladon",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "11.0.1",
+    "react": "^18.0.0-alpha-464f27572-20210713",
+    "react-apple-emojis": "^2.0.2",
+    "react-dom": "^18.0.0-alpha-464f27572-20210713",
+    "react-icons": "^4.2.0",
+    "react-scripts": "^4.0.3",
+    "sass": "^1.45.0"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^5.5.0",
+    "autoprefixer": "^10.3.1",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.2.4"
+  }
+}
