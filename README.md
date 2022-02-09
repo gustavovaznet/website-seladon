@@ -60,4 +60,4 @@ To execute the project, it will be necessary to install / use the following appl
 * NPM/Yarn
 
 ## Technologies
-* HTML, CSS/Tailwind, Javascript and ReactJS.
+* HTML, CSS/SASS, Javascript and ReactJS.
