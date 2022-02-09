@@ -1,5 +1,5 @@
-# website-seladon
-Seladon Solutions Website
+# Seladon
+This is a website developed for Seladon Solutions.
 
 ## Screenshots
 <table>
