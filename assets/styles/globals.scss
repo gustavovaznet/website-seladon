@@ -1,0 +1,182 @@
+//GLOBALS CSS STYLES
+
+//TAILWIND
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+//GENERAL CSS
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 1.6;
+  font-size: 12px;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-weight: bold;
+}
+
+//VARIABLES
+:root {
+  --underline-intrinsic-width: 8;
+  --underline-width: 12;
+  --underline-color: #808000;
+  --underline-cap-width: 4px;
+  --underline-offset-y: -5px;
+  --underline-padding-x: 0.12em;
+}
+
+//HEADING
+.heading {
+  display: inline;
+  --underline-width-scale: calc(
+    var(--underline-width) / var(--underline-intrinsic-width)
+  );
+  padding: 0
+    calc(
+      var(--underline-padding-x) +
+        calc(var(--underline-cap-width) * var(--underline-width-scale))
+    );
+  box-decoration-break: clone;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+    180deg,
+    var(--underline-color),
+    var(--underline-color)
+  );
+  background-position-x: calc(
+      var(--underline-cap-width) * var(--underline-width-scale)
+    ),
+    0, 100%;
+  background-position-y: calc(100% - var(--underline-offset-y) * -1);
+  background-size: calc(
+        100% -
+          calc(var(--underline-cap-width) * var(--underline-width-scale) * 2)
+      )
+      calc(var(--underline-width) * 1px),
+    auto calc(var(--underline-width) * 1px),
+    auto calc(var(--underline-width) * 1px);
+}
+
+//SHADOW
+.shadow {
+  -webkit-box-shadow: 0px 14px 14px 0px #808000;
+  box-shadow: 0px 14px 14px 0px #808000;
+}
+
+//MADIA QUERIES
+@media (max-width: 576px) {
+  .content {
+    padding-top: 51px;
+  }
+}
+@media (min-width: 577px) {
+  .pt-scroll {
+    padding-top: 51px;
+  }
+  .nav-sticky {
+    position: fixed !important;
+    min-width: 100%;
+    top: 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.25s ease-in;
+    z-index: 1;
+    left: 0;
+    background-image: linear-gradient(
+      to right bottom,
+      #212178,
+      #2c2ca0,
+      #3737c8
+    );
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-sticky > nav {
+    justify-content: center;
+  }
+}
+
+//HAMBURGUER MENU
+.hamburger {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  transition: all 0.25s;
+}
+
+.hamburger__top-bun,
+.hamburger__bottom-bun {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger:hover [class*="-bun"] {
+  background: #fff;
+}
+
+.hamburger__top-bun {
+  transform: translateY(-5px);
+}
+
+.hamburger__bottom-bun {
+  transform: translateY(3px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(-1px);
+}
+
+.open .hamburger__top-bun {
+  transform: rotate(45deg) translateY(0px);
+}
+
+.open .hamburger__bottom-bun {
+  transform: rotate(-45deg) translateY(0px);
+}
+
+//TITLE
+.title {
+  color: #808000;
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 900;
+}
+
+.copyright {
+  text-align: center;
+  background-color: #808000;
+}
+
+.copyright-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+}
